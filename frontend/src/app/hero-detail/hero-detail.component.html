@@ -1,0 +1,32 @@
+<div *ngIf="hero">
+  <h2>Details: {{hero.hero }} </h2>
+  <div>
+    <label for="hero-id">Hero ID: </label> {{hero._id}}
+  </div>
+  <div>
+    <label for="hero-hero">Hero name: </label>
+    <input id="hero-hero" [(ngModel)]="hero.hero" placeholder="Hero name" />
+
+  </div>
+  
+  <h2>Hero photo: </h2>
+    <div>
+      <img src={{hero.photo}}>
+      <input #imageInput
+           type="file"
+           accept="image/*"
+          (change)="processPhotoFile()">
+    </div>
+
+  <h2>Hero Pet: </h2>
+  <div>
+    <select [(ngModel)]="pet">
+        <option style="width: 60px;" *ngFor="let pet of pets" [ngValue]="pet" >{{pet.pet}}</option>
+    </select>
+    <button (click)="addPet(pet)">save pet</button>
+  </div>
+  <p>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+  </p>
+</div>

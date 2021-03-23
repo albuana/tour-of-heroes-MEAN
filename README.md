@@ -1,5 +1,5 @@
 <h2 align="center"> 
-	 tour-of-heroes-angular 💻 DONE ✅
+	 tour-of-heroes-MEAN 💻 DONE ✅
 </h2>
 
 <h2>MEAN Stack</h2>
